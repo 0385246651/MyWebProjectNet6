@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MyWebProjectNet5.props" />
+</Project>
