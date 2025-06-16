@@ -26,3 +26,5 @@ D:\Net_Core\Net_core_empty\MyWebProjectNet6\obj\Debug\net6.0\refint\MyWebProject
 D:\Net_Core\Net_core_empty\MyWebProjectNet6\obj\Debug\net6.0\MyWebProjectNet6.pdb
 D:\Net_Core\Net_core_empty\MyWebProjectNet6\obj\Debug\net6.0\MyWebProjectNet6.genruntimeconfig.cache
 D:\Net_Core\Net_core_empty\MyWebProjectNet6\obj\Debug\net6.0\ref\MyWebProjectNet6.dll
+D:\Net_Core\Net_core_empty\MyWebProjectNet6\obj\Debug\net6.0\MyWebProjectNet6.sourcelink.json
+D:\Net_Core\Net_core_empty\MyWebProjectNet6\bin\Debug\net6.0\MyWebProjectNet6.staticwebassets.runtime.json

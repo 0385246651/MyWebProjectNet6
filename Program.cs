@@ -1,58 +1,28 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Hosting; // Cần thiết cho IWebHostBuilder, ConfigureWebHostDefaults
+using Microsoft.Extensions.Hosting; // Cần thiết cho IHostBuilder, Host
+using System; // Cần thiết cho Console.WriteLine
 
 namespace MyWebProjectNet5
 {
     public class Program
     {
-        /* 
-            Host (IHost) object :
-                - Dependency Injection (ID) : IServiceProvider (ServiceCollection)
-                - Logging (ILogging)
-                - Configuration
-                - IHostedService => StartAsync : Run HTTP Server (Kestrel Http)
 
-                1. Tại IHostBuilder
-                2. Cấu hình, đăng ký các dịch vụ (gọi ConfigureWebHostDefaults)
-                3. Gọi IHostBuilder.Build() => Host (IHost)
-                4. Gọi phương thức Host.Run
-
-                Request => pipeLine (Middleware)
-        */
-
-        //Tự tạo
         public static void Main(string[] args)
         {
-            Console.WriteLine("Start Appp");
-            IHostBuilder builder = Host.CreateDefaultBuilder(args);
-            //Khởi tạod đối tg có sẵn dịch vụ 
-            builder.ConfigureAppConfiguration((IWebHostBuilder webBuilder) =>
-            {
-                //Tùy biến thêm về Host
-                webBuilder.UseStartup<MyStartUp>();
-            });
-
-            IHost host = builder.Build();
-            host.Run();
+            Console.WriteLine("Starting the application..."); // Thông báo khởi động rõ ràng
+            // Gọi phương thức CreateHostBuilder để xây dựng và chạy Host
+            CreateHostBuilder(args).Build().Run();
         }
 
-
-        // public static void Main(string[] args)
-        // {
-        //     CreateHostBuilder(args).Build().Run();
-        // }
-
-        // public static IHostBuilder CreateHostBuilder(string[] args) =>
-        //     Host.CreateDefaultBuilder(args)
-        //         .ConfigureWebHostDefaults(webBuilder =>
-        //         {
-        //             webBuilder.UseStartup<Startup>();
-        //         });
+        // Đây là phương thức chuẩn để tạo và cấu hình IHostBuilder cho ứng dụng web ASP.NET Core
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args) // Bắt đầu với một Host Builder mặc định
+                .ConfigureWebHostDefaults(webBuilder => // Cấu hình các thiết lập đặc thù cho Web Host
+                {
+                    // Tại đây, bạn chỉ định lớp Startup của ứng dụng web
+                    // Đảm bảo bạn có một class MyStartUp với các phương thức ConfigureServices và Configure
+                    webBuilder.UseWebRoot("public");
+                    webBuilder.UseStartup<MyStartUp>();
+                });
     }
 }

@@ -1,12 +1,125 @@
 {
   "Version": 1,
-  "Hash": "izPkO5jXNU/AALVDFrYxZy3Zaerzs1SQ7j9FzN/LqIA=",
+  "Hash": "bUAC/lizDlQz1c4nDNQzpHdtYo0cG725Wv14IwtjmSg=",
   "Source": "MyWebProjectNet6",
   "BasePath": "_content/MyWebProjectNet6",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "MyWebProjectNet6\\wwwroot",
+      "Source": "MyWebProjectNet6",
+      "ContentRoot": "D:\\Net_Core\\Net_core_empty\\MyWebProjectNet6\\wwwroot\\",
+      "BasePath": "_content/MyWebProjectNet6",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Net_Core\\Net_core_empty\\MyWebProjectNet6\\wwwroot\\1.txt",
+      "SourceId": "MyWebProjectNet6",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Net_Core\\Net_core_empty\\MyWebProjectNet6\\wwwroot\\",
+      "BasePath": "_content/MyWebProjectNet6",
+      "RelativePath": "1#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fgbjpjww8t",
+      "Integrity": "QVrROrnSvuWIK1i7sH9s0zaxlwaZ4mcKtQZ3yqrK0MI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\1.txt"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "1.fgbjpjww8t.txt",
+      "AssetFile": "D:\\Net_Core\\Net_core_empty\\MyWebProjectNet6\\wwwroot\\1.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QVrROrnSvuWIK1i7sH9s0zaxlwaZ4mcKtQZ3yqrK0MI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:05:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fgbjpjww8t"
+        },
+        {
+          "Name": "label",
+          "Value": "1.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QVrROrnSvuWIK1i7sH9s0zaxlwaZ4mcKtQZ3yqrK0MI="
+        }
+      ]
+    },
+    {
+      "Route": "1.txt",
+      "AssetFile": "D:\\Net_Core\\Net_core_empty\\MyWebProjectNet6\\wwwroot\\1.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QVrROrnSvuWIK1i7sH9s0zaxlwaZ4mcKtQZ3yqrK0MI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:05:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QVrROrnSvuWIK1i7sH9s0zaxlwaZ4mcKtQZ3yqrK0MI="
+        }
+      ]
+    }
+  ]
 }

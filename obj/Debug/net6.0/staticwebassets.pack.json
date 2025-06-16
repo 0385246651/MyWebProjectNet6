@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Net_Core\\Net_core_empty\\MyWebProjectNet6\\wwwroot\\1.txt",
+      "PackagePath": "staticwebassets\\1.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MyWebProjectNet6.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MyWebProjectNet6.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.MyWebProjectNet6.props",
+      "PackagePath": "build\\MyWebProjectNet6.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MyWebProjectNet6.props",
+      "PackagePath": "buildMultiTargeting\\MyWebProjectNet6.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.MyWebProjectNet6.props",
+      "PackagePath": "buildTransitive\\MyWebProjectNet6.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
