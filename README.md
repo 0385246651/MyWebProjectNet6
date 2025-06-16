@@ -38,5 +38,6 @@
 	   
 	   dotnet --list-sdks
 	   -emtypy web : dotnet new web (dotnet new web -f net5.0 -o MyWebProjectNet5)
+    	<TargetFramework>net6.0</TargetFramework> rồi chạy dotnet restore để chạy watch trên .net 5
 	   -run project : dotnet run \ dotnet watch run
 	-Enable HTTPS : dotnet dev-certs https --clean , dotnet dev-certs https --trust 
