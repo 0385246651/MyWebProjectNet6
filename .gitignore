@@ -1,66 +1,59 @@
 # Gitignore cho project .NET / ASP.NET Core của Raiden
 
 # 1. Binaries và các file được tạo ra khi build (Artifacts)
-[Bb]in/             # Thư mục chứa các file thực thi và thư viện đã biên dịch
-[Oo]bj/             # Thư mục chứa các file build trung gian
-*.dll               # File thư viện đã biên dịch
-*.exe               # File thực thi
-*.pdb               # File cơ sở dữ liệu debug của chương trình
-*.tmp               # Các file tạm thời
-*.suo               # File tùy chọn người dùng của Solution (Visual Studio)
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.pdb
+*.tmp
+*.suo
 
 # 2. File đặc thù của IDE (Visual Studio / VS Code)
-.vs/                # Thư mục chứa cài đặt người dùng và cache của Visual Studio
-.vscode/            # Thư mục chứa cài đặt workspace của VS Code.
-                    # Mặc định nên ignore, nhưng có thể bỏ comment các dòng dưới nếu muốn chia sẻ cấu hình debug/task/extension
-#!.vscode/settings.json # Giữ lại nếu muốn chia sẻ cài đặt workspace
-#!.vscode/tasks.json    # Giữ lại nếu muốn chia sẻ cấu hình task
-#!.vscode/launch.json   # Giữ lại nếu muốn chia sẻ cấu hình debug
-#!.vscode/extensions.json # Giữ lại nếu muốn gợi ý extension cho team
-*.sync-conf         # File cấu hình remote development của VS Code
-*.vshost.* # File process host của Visual Studio
+.vs/
+.vscode/
+*.vshost.*
+*.sync-conf
 
 # 3. NuGet packages và các file liên quan
-[Pp]ackages/        # Thư mục chứa các gói NuGet (kiểu cũ)
-*.nuget.props       # Các file thuộc tính build của NuGet
-*.nuget.targets     # Các file target build của NuGet
-.nuget/             # Thư mục cấu hình NuGet (ngoại trừ NuGet.Config)
-!/.nuget/NuGet.Config # Giữ lại file NuGet.Config nếu nó nằm trong .nuget/
+[Pp]ackages/
+*.nuget.props
+*.nuget.targets
+.nuget/
+!/.nuget/NuGet.Config
 
-# 4. Node.js / npm artifacts (vì bạn có node_modules, package-lock.json, package.json)
-node_modules/       # Thư mục chứa tất cả các dependencies của Node.js
-npm-debug.log* # File log debug của npm
-yarn-debug.log* # File log debug của yarn
-yarn-error.log* # File log lỗi của yarn
-.npm/               # Thư mục cache của npm
-.yarn/              # Thư mục cache của yarn
-# package-lock.json # Mặc định nên commit để đảm bảo tính nhất quán giữa các dev, nhưng nếu muốn ignore thì bỏ comment dòng này
-# yarn.lock         # Tương tự như package-lock.json, thường nên commit
+# 4. Node.js / npm artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+# package-lock.json
+# yarn.lock
 
-# 5. Các file cấu hình nhạy cảm hoặc cục bộ (local)
-appsettings.Development.json # Cài đặt riêng cho môi trường phát triển (có thể chứa thông tin nhạy cảm)
-launchSettings.json          # Cài đặt khởi chạy ứng dụng (ví dụ: cổng, biến môi trường)
+# 5. Các file cấu hình nhạy cảm hoặc cục bộ
+appsettings.Development.json
+launchSettings.json
 
 # 6. Các file logs
-logs/               # Thư mục logs chung
-*.log               # Các file log cụ thể
+logs/
+*.log
 
-# 7. File Database cục bộ (nếu có, ví dụ SQL Server LocalDB, SQLite)
-*.mdf               # File database của SQL Server LocalDB
-*.ldf               # File log của SQL Server LocalDB
-*.sdf               # File database của SQL Server Compact Edition
+# 7. File Database cục bộ
+*.mdf
+*.ldf
+*.sdf
 
 # 8. Các file hệ thống hoặc file tạm thời khác
-**/.DS_Store        # File hệ thống của macOS
-thumbs.db           # File cache thumbnail của Windows
-*.bak               # File backup
-*.old               # File cũ
+**/.DS_Store
+thumbs.db
+*.bak
+*.old
 
-# 9. Các file khác bạn đang thấy trong trạng thái A/M/U mà không thuộc các nhóm trên:
-# .dtbcache.v2 (trong .vs/) -> Đã được ignore bởi .vs/
-# .futdcache.utd (trong .vs/) -> Đã được ignore bởi .vs/
-# index.d.ts (trong node_modules/) -> Đã được ignore bởi node_modules/
-# LICENCE.md, README.md, .gitignore: Các file này thường NÊN được commit.
-# MyStartUp.cs, Program.cs, Startup.cs, MyWebProjectNet6.csproj, MyWebProjectNet6.sln:
-#   Đây là các file mã nguồn/cấu hình project của bạn và NÊN được commit.
-# public/1.txt: File này đang được thêm mới ('A'). Nếu đây là file nội dung static bạn muốn có, thì giữ lại. Nếu không, xóa đi.
+# 9. Các file rác, test, hoặc static mà bạn không muốn đưa lên Git
+public/1.txt
+
+# File cache, AssemblyInfo generated
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
